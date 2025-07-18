@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+
+    // Change this to your discord ID
+    discord_id = "314685115189952512";
+
+    // API URL
+    api_url = "https://api.lanyard.rest/v1/users/" + discord_id;
+
+    // Fetch the data from the API
+    function getSpotifyData() {
+    fetch(api_url)
+        .then(response => response.json())
+        .then(data => {
+        let currentSong = data.data.spotify.song;
+        let currentArtist = data.data.spotify.artist;
+        let currentAlbumArt = data.data.spotify.album_art_url;
+
+        console.log("Current Song: " + currentSong);
+        console.log("Current Artist: " + currentArtist);
+        console.log("Current Album Art: " + currentAlbumArt);
+        })
+        .catch(error => console.error());
+    }
+
+    getSpotifyData();
+    setInterval(getSpotifyData, 10000); // Update every 10 seconds
+
+
+        
+
+
+
+</script>
+</html>
