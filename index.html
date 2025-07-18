@@ -35,8 +35,9 @@
         position: relative;
         border-radius: 12px;
         overflow: hidden;
-        width: 300px; /* Set a fixed width */
+        width: auto; /* Change to auto */
         height: 100px; /* Set a fixed height */
+        display: inline-block; /* Add this line */
       }
 
       .background-blur {
@@ -74,9 +75,15 @@
         position: relative;
         z-index: 3;
         padding: 10px;
+        display: flex;
       }
 
-      .col-sm-6 {
+      .col-auto {
+        padding: 0;
+        flex: none;
+      }
+
+      .col {
         padding: 0;
       }
 
@@ -122,7 +129,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: 180px;
+        max-width: 180px; /* Initial max-width */
       }
     </style>
   </head>
@@ -168,6 +175,15 @@
           const backgroundElement = document.getElementById("backgroundBlur");
           if (backgroundElement && currentAlbumArt) {
             backgroundElement.style.backgroundImage = `url("${currentAlbumArt}")`;
+          }
+
+          // Dynamically adjust max-width based on song title length
+          const songInfoElement = document.querySelector(".song-info");
+          if (songInfoElement) {
+            const baseWidth = 100; // Base width
+            const titleLength = currentSong.length;
+            const dynamicWidth = baseWidth + (titleLength * 7); // Adjust multiplier as needed
+            songInfoElement.style.maxWidth = `${dynamicWidth}px`;
           }
         })
         .catch((error) => console.error(error));
