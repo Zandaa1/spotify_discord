@@ -13,7 +13,6 @@ A simple widget to display the currently playing Spotify song from a Discord use
 
 - OBS Studio
 - A Discord account
-- A Lanyard API key (This is not actually needed, Lanyard is public)
 
 ## Setup
 
