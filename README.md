@@ -16,14 +16,12 @@ A simple widget to display the currently playing Spotify song from a Discord use
 
 ## Setup
 
-1.  **Create a new HTML file** (e.g., `index.html`) in your project directory.
-2.  **Copy the code** from the provided `index.html` into your new file.
-3.  **Replace the `discord_id`** variable in the JavaScript section with your Discord user ID.
-4.  **Open OBS Studio.**
-5.  **Add a "Browser Source".**
-6.  **Set the "Local file"** option and browse to your `index.html` file.
-7.  **Adjust the width and height** of the browser source in OBS to fit your needs. A good starting point is 300x100.
-8.  **Customize the CSS** in the `index.html` file to match your desired style.
+**Replace the `discord_id`** variable in the JavaScript section with your Discord user ID.
+**Open OBS Studio.**
+**Add a "Browser Source".**
+**Set the "Local file"** option and browse to your `index.html` file.
+**Adjust the width and height** of the browser source in OBS to fit your needs. A good starting point is 300x100.
+**Customize the CSS** in the `index.html` file to match your desired style.
 
 ## Customization
 
@@ -39,10 +37,6 @@ You can customize the appearance of the widget by modifying the CSS in the `<sty
 
 -   The widget updates every 10 seconds. You can change the update interval by modifying the `setInterval` function in the JavaScript section.
 -   The widget uses the Lanyard API to fetch the Spotify data from Discord.
-
-## Example
-
-![OBS Spotify Widget Example](https://i.imgur.com/YOUR_IMAGE_HERE.png)
 
 ## Contributing
 
